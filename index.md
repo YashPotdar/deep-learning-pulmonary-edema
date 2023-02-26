@@ -45,5 +45,11 @@ Add technical details here.
   </div>
 </div>
 
+<details>
+    <summary>Example dropdown</summary>
+    <br>
+    Here are some hairy, scary details.
+</details>
+
 
 <iframe src="assets/example-map.html" width=800 height=600 frameBorder=0></iframe>
