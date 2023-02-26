@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Data Science Capstone"
+nav_exclude: true
 ---
 
 # Deep Learning for Pulmonary Edema Prediction
