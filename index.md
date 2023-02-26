@@ -2,6 +2,7 @@
 layout: page
 title: "Data Science Capstone"
 ---
+
 # Deep Learning for Pulmonary Edema Prediction
 
 ### David Davila, Marco Marocho, Yash Potdar
