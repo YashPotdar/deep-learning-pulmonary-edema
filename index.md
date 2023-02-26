@@ -1,11 +1,11 @@
 # Deep Learning for Pulmonary Edema Prediction
 
 ### David Davila, Marco Marocho, Yash Potdar
-### UC San Diego Data Science
+### UC San Diego 
+#### Advisor: Dr. Albert Hsiao 
 
 This is about as **barebones** as a Jekyll site can be. All I've done is embed a plotly plot here.
 
-<iframe src="assets/example-map.html" width=800 height=600 frameBorder=0></iframe>
 
 # Table of contents
 1. [Introduction](#introduction)
@@ -24,3 +24,11 @@ This is a sub paragraph, formatted in heading 3 style
 
 ## Another paragraph <a name="paragraph2"></a>
 The second paragraph text
+
+<details>
+<summary>Example Dropdown</summary>
+<br>
+Add technical details here.
+</details>
+
+<iframe src="assets/example-map.html" width=800 height=600 frameBorder=0></iframe>
