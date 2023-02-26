@@ -25,10 +25,16 @@ This is a sub paragraph, formatted in heading 3 style
 ## Another paragraph <a name="paragraph2"></a>
 The second paragraph text
 
+<button type="button">Click Me!</button>
+
+<button type="button"
+
 <details>
 <summary>Example Dropdown</summary>
 <br>
 Add technical details here.
 </details>
+
+</button>
 
 <iframe src="assets/example-map.html" width=800 height=600 frameBorder=0></iframe>
