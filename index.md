@@ -6,6 +6,16 @@
 
 This is about as **barebones** as a Jekyll site can be. All I've done is embed a plotly plot here.
 
+---
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
 
 # Table of contents
 1. [Introduction](#introduction)
