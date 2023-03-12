@@ -4,11 +4,6 @@ body {
   margin: 0 auto; /* Center the content horizontally */
 }
 
-:target {
-  padding: 200px;
-  background-color: #ffffcc;
-}
-
 .button-container {
   text-align: center;
 }
@@ -49,4 +44,9 @@ table td {
   background-color: #f2f2f2;
   padding: 10px;
   border-bottom: 1px solid #ddd;
+}
+
+.jump-link-target {
+  padding-top: 100px; /* padding to fix being hidden from top header */
+  margin-top: -50px; /* counteract padding */
 }
