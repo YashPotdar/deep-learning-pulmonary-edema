@@ -14,7 +14,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 100%;
     height: 30px;
     overflow-x: scroll;
     white-space: nowrap;
