@@ -1,4 +1,5 @@
 body {
+  width:100%;
   max-width: 3000px;
   margin: 0 auto; /* Center the content horizontally */
 }
