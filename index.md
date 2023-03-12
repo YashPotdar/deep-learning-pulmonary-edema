@@ -36,6 +36,19 @@
   }
 </style>
 
+<table style="margin:auto; border-collapse: collapse;">
+  <tr>
+    <td style="border-right: 1px solid black;">Cell 1</td>
+    <td style="border-right: 1px solid black;">Cell 2</td>
+    <td>Cell 3</td>
+  </tr>
+  <tr>
+    <td style="border-right: 1px solid black;">Cell 4</td>
+    <td style="border-right: 1px solid black;">Cell 5</td>
+    <td>Cell 6</td>
+  </tr>
+</table>
+
 
 ## David Davila-Garcia, Yash Potdar, Marco Morocho
 
