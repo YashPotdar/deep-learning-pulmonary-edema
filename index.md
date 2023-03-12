@@ -14,8 +14,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100px;
+    width: 50%;
+    height: 30px;
     overflow-x: scroll;
     white-space: nowrap;
     background-color: #76b5c5;
@@ -24,7 +24,7 @@
   .scrollable-outline ul {
     display: inline-block;
     margin: 0;
-    padding: 500;
+    padding: 100;
   }
 
   .scrollable-outline li {
