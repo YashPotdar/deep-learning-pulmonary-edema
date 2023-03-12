@@ -39,10 +39,11 @@
 
 ## David Davila-Garcia, Yash Potdar, Marco Morocho
 
-#### Advisor: Dr. Albert Hsiao 
+### Advisor: Dr. Albert Hsiao 
 
-<img src="assets/UCSanDiego_Halicioglu_BlueGold.png" alt="HDSI logo" height="200">
+<img src="assets/UCSanDiego_Halicioglu_BlueGold.png" alt="HDSI logo" height="100">
 
+<br>
   
  <div class="button-container">
   <a href="https://github.com/ddav118/DSC-180B"  target="_blank" class="button">Project Repository</a>
@@ -51,7 +52,6 @@
 
 
 
-This is about as **barebones** as a Jekyll site can be. All I've done is embed a plotly plot here.
 
 ---
 
