@@ -97,7 +97,7 @@ Add description about Findings
 Add description about losses - train and test
 
 ### AUROC Curves <a name="auroc_subparagraph"></a>
-Add description about auroc
+<iframe src="assets/ROS_Comparison.html" width=800 height=600 frameBorder=0></iframe>
 
 ## Takeaways <a name="takeaways"></a>
 Add description about Takeaways - Conclusion
