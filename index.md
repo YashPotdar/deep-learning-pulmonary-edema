@@ -1,3 +1,37 @@
+<div class="scrollable-outline">
+  <ul>
+    <li><a href="#section1">Section 1</a></li>
+    <li><a href="#section2">Section 2</a></li>
+    <li><a href="#section3">Section 3</a></li>
+  </ul>
+</div>
+
+<style>
+  .scrollable-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    background-color: #f0f0f0;
+  }
+
+  .scrollable-outline ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .scrollable-outline li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 18px;
+  }
+</style>
+
+
 # Deep Learning for Pulmonary Edema Prediction
 {:.no_toc}
 
