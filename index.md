@@ -50,7 +50,6 @@ function scrollToSection(event, sectionId) {
 
 
 
-# Deep Learning for Pulmonary Edema Prediction
 
 ### David Davila, Yash Potdar, Marco Morocho
 
