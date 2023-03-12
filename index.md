@@ -43,8 +43,11 @@
 
 #### Advisor: Dr. Albert Hsiao 
   
+ <div class="button-container">
   <a href="https://github.com/ddav118/DSC-180B"  target="_blank" class="button">Project Repository</a>
   <a href="https://github.com/YashPotdar/deep-learning-pulmonary-edema/blob/main/A14-2.pdf"  target="_blank" class="button">View Poster</a>
+ </div>
+
 
 
 This is about as **barebones** as a Jekyll site can be. All I've done is embed a plotly plot here.
