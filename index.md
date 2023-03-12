@@ -15,7 +15,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 100px;
     overflow-x: scroll;
     white-space: nowrap;
     background-color: #76b5c5;
