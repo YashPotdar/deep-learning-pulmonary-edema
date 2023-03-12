@@ -48,5 +48,5 @@ table td {
 
 .jump-link-target {
   padding-top: 2000px; /* padding to fix being hidden from top header */
-  margin-top: -50px; /* counteract padding */
+  margin-top: 0px; /* counteract padding */
 }
