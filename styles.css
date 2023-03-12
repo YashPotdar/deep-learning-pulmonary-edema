@@ -1,3 +1,8 @@
+body {
+  width: 800px; /* Change to desired width */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
 .button-container {
   text-align: center;
 }
