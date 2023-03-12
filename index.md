@@ -15,7 +15,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 5000px;
     overflow-x: scroll;
     white-space: nowrap;
     background-color: #76b5c5;
@@ -23,7 +23,7 @@
 
   .scrollable-outline ul {
     display: inline-block;
-    margin: 100;
+    margin: 0;
     padding: 100;
   }
 
