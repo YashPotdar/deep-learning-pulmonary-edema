@@ -34,6 +34,14 @@
   }
 </style>
 
+<a href="#" onclick="scrollToSection('#section-id')">Scroll to section</a>
+
+<!-- section to scroll to -->
+<div id="section-id">
+  <h2>Section heading</h2>
+  <p>Section content</p>
+</div>
+
 <script>
   function scrollToSection(sectionId) {
     document.querySelector(sectionId).scrollIntoView({
