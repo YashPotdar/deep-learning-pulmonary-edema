@@ -1,4 +1,12 @@
-<div class="scrollable-outline">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My Markdown File</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scrollable-outline">
   <ul>
     <li><a href="#overview">Project Overview</a></li>
     <li><a href="#intro">Introduction</a></li>
@@ -40,6 +48,9 @@
 ### UC San Diego 
 
 #### Advisor: Dr. Albert Hsiao 
+  
+  <a href="https://www.example.com" class="button">Click me</a>
+
 
 
 This is about as **barebones** as a Jekyll site can be. All I've done is embed a plotly plot here.
@@ -109,6 +120,10 @@ Add technical details here.
     <br>
     Here are some hairy, scary details.
 </details>
+
+
+</body>
+</html>
 
 
 <iframe src="assets/example-map.html" width=800 height=600 frameBorder=0></iframe>
