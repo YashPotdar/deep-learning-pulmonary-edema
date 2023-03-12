@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>My Markdown File</title>
   <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+
   <div class="scrollable-outline">
   <ul>
     <li><a href="#overview">Project Overview</a></li>
@@ -121,9 +115,6 @@ Add technical details here.
     Here are some hairy, scary details.
 </details>
 
-
-</body>
-</html>
 
 
 <iframe src="assets/example-map.html" width=800 height=600 frameBorder=0></iframe>
