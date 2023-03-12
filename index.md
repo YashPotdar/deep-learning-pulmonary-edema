@@ -18,11 +18,11 @@
     height: 50;
     overflow-x: scroll;
     white-space: nowrap;
-    background-color: #76b5c5;
+    background-color: #F0F0F0;
   }
 
   .scrollable-outline ul {
-    display: none;
+    display: inline-block;
     margin: 0;
     padding: 100;
   }
