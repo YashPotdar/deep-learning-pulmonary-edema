@@ -1,5 +1,8 @@
-.button {
+.button-container {
   text-align: center;
+}
+
+.button {
   display: inline-block;
   padding: 10px 20px;
   background-color: #008CBA;
