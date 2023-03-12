@@ -1,8 +1,11 @@
 <div class="scrollable-outline">
   <ul>
     <li><a href="#overview">Project Overview</a></li>
-    <li><a href="#section2">Section 2</a></li>
-    <li><a href="#section3">Section 3</a></li>
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#methods">Methods</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#takeaways">Takeaways</a></li>
+    <li><a href="#acks">Acknowledgments</a></li>   
   </ul>
 </div>
 
@@ -63,7 +66,7 @@ Pulmonary edema is a condition in which there is an excess of fluid in the lungs
 ## Introduction <a name="intro"></a>
 Convolutional neural networks (CNNs) have been effective in classifying the presence of diseases in image data. In most cases, however, the data are labeled by physicians before being trained on, making this a supervised learning approach. Within the application of using chest radiographs to classify pulmonary edema, finding labeled data is often difficult due to how labor-intensive and subjective this process may be. Two radiologists may label mild cases of pulmonary edema differently since the indications of mild pulmonary edema would be Kerley B lines and peribronchial cuffing, which are more subtle. We can diagnose an individual with cardiogenic pulmonary edema if they have high B-type natriuretic peptide (BNP) and BNPP Based on scientific literature, the threshold for diagnosing cardiogenic pulmonary edema is BNPP > 400 or BNP > 100 (Kimand Januzzi Jr, 2011). A highly accurate neural network has the potential to save lives because cases can be diagnosed before symptoms worsen, allowing individuals with pulmonary edema to undergo the treatment they need. It will also be able to help individuals in Low and Middle-Income (LMIC) countries in which there may not be enough radiologists to interpret chest x-rays. In our replication of the model from the Deep Learning Radiographic Assessment of Pulmonary Edema paper by Justin Huynh et. al., we aimed to compare ResNet152 and VGG16 models to infer BNPP values from radiographs. However, with an existing lung image segmentation network, we are able to isolate each lung into two separate images, which we would then use our CNN models to train on. By having the original image, left lung, right lung, and combination of lungs with external data such as BMI, we hope this will allow us to better classify and quantify cardiogenic pulmonary edema. 
 
-## Methods <a name="subparagraph1"></a>
+## Methods <a name="methods"></a>
 Add description about Methods
 
 ### Convolutional Neural Network (CNN) <a name="cnn_subparagraph"></a>
@@ -78,7 +81,7 @@ Since edema is present in the lungs and a portion of the lungs are behind the he
 
 Finally, we applied these masks to the given images to produce the segmented images with area of interest. By simply multiplying the mask to the original image, we were able to produce an accurate isolated image of the lungs and heart. In Figure TODO, we can see examples of original images and their segmented counterparts, which would subsequently be fed into our neural network.
 
-## Findings <a name="findings"></a>
+## Results <a name="results"></a>
 Add description about Findings
 
 ### Losses <a name="losses_subparagraph"></a>
@@ -90,7 +93,7 @@ Add description about auroc
 ## Takeaways <a name="takeaways"></a>
 Add description about Takeaways - Conclusion
 
-## References <a name="refs"></a>
+## Acknowledgments <a name="acks"></a>
 Add refs
 
 <button type="button">Click Me!</button>
