@@ -1,38 +1,4 @@
-<div class="scrollable-outline">
-  <ul>
-    <li><a href="#overview">Project Overview</a></li>
-    <li><a href="#intro">Introduction</a></li>
-    <li><a href="#methods">Methods</a></li>
-    <li><a href="#results">Results</a></li>
-    <li><a href="#takeaways">Takeaways</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>   
-  </ul>
-</div>
 
-<style>
-  .scrollable-outline {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50;
-    overflow-x: scroll;
-    white-space: nowrap;
-    background-color: #F0F0F0;
-  }
-
-  .scrollable-outline ul {
-    display: inline-block;
-    margin: 0;
-    padding: 100;
-  }
-
-  .scrollable-outline li {
-    display: inline-block;
-    margin-right: 20px;
-    font-size: 18px;
-  }
-</style>
 
 
 ### David Davila, Yash Potdar, Marco Morocho
