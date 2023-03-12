@@ -1,11 +1,11 @@
 <div class="scrollable-outline">
   <ul>
-    <li><a href="#overview" onclick="scrollToSection(event, 'section1')">Project Overview</a></li>
+    <li><a href="#overview">Project Overview</a></li>
     <li><a href="#intro">Introduction</a></li>
     <li><a href="#methods">Methods</a></li>
     <li><a href="#results">Results</a></li>
     <li><a href="#takeaways">Takeaways</a></li>
-    <li><a href="#acks">Acknowledgments</a></li>   
+    <li><a href="#acknowledgments">Acknowledgments</a></li>   
   </ul>
 </div>
 
@@ -22,7 +22,7 @@
   }
 
   .scrollable-outline ul {
-    display: inline-block;
+    display: none;
     margin: 0;
     padding: 100;
   }
@@ -33,22 +33,6 @@
     font-size: 18px;
   }
 </style>
-
-
-<script>
-function scrollToSection(event, sectionId) {
-  event.preventDefault();
-  const section = document.getElementById(sectionId);
-  section.scrollIntoView({ behavior: 'smooth' });
-  const menuLinks = document.querySelectorAll('.menu a');
-  menuLinks.forEach(link => {
-    link.classList.remove('active');
-  });
-  event.target.classList.add('active');
-}
-</script>
-
-
 
 
 ### David Davila, Yash Potdar, Marco Morocho
@@ -97,7 +81,7 @@ Add description about auroc
 ## Takeaways <a name="takeaways"></a>
 Add description about Takeaways - Conclusion
 
-## Acknowledgments <a name="acks"></a>
+## Acknowledgments <a name="acknowledgments"></a>
 Add refs
 
 <button type="button">Click Me!</button>
