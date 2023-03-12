@@ -4,6 +4,10 @@ body {
   margin: 0 auto; /* Center the content horizontally */
 }
 
+#anchor {
+  scroll-margin-top: 500px;
+}
+
 .button-container {
   text-align: center;
 }
