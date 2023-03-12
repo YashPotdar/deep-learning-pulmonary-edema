@@ -23,7 +23,7 @@
 
   .scrollable-outline ul {
     display: inline-block;
-    margin: 20000;
+    margin: 0;
     padding: 100;
   }
 
