@@ -43,9 +43,9 @@
     <td><a href="https://www.linkedin.com/in/marco-morocho-0062641b9/" target="_blank">Marco Morocho</a></td>
   </tr>
   <tr>
-    <td style="border-right: 1px solid black;">Cell 4</td>
-    <td style="border-right: 1px solid black;">Cell 5</td>
-    <td>Cell 6</td>
+    <td style="border-right: 1px solid black;">Pic 1</td>
+    <td style="border-right: 1px solid black;">Pic 2</td>
+    <td>Pic 3</td>
   </tr>
 </table>
 
