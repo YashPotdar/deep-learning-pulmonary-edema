@@ -38,7 +38,7 @@
 # Deep Learning for Pulmonary Edema Prediction
 {:.no_toc}
 
-### David Davila, Marco Marocho, Yash Potdar
+### David Davila, Yash Potdar, Marco Morocho
 {:.no_toc}
 
 ### UC San Diego 
@@ -51,12 +51,6 @@
 This is about as **barebones** as a Jekyll site can be. All I've done is embed a plotly plot here.
 
 ---
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
 
 ---
 
