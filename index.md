@@ -69,7 +69,8 @@
 
 ---
 
-## Project Overview <a name="overview" class="jump-link-target"></a>
+<h2 id="overview" class="jump-link-target">Project Overview</h2>
+## Project Overview <a name="overview2" class="jump-link-target"></a>
 Pulmonary edema is a condition in which there is an excess of fluid in the lungs. As pulmonary edema cases can quickly worsen and eventually lead to heart failure in cases of acute pulmonary edema, early and accurate detection is crucial in radiographs. Detecting pulmonary edema through radiographic assessment can be a challenge primarily because of the differences in each case. In this project, our main objective is to improve upon the model in the Deep Learning Radiographic Assessment of Pulmonary Edema paper, which had a goal of predicting the presence of pulmonary edema in radiographs using varying input sizes. In this project, we use transfer learning with an in-house lung image segmentation model from Hsiao Lab with the objective of isolating the lung region. We believe this reduces noise and focuses the network on the lungs, which is where edema would reside. We also plan to improve the existing ResNet152 model by adding labels for BMI and creatinine levels, which are relevant factors in presence of edema. These are relevant factors as creatinine levels can be used to measure how well your kidneys are working. With dramatically increased levels of creatinine, it can indicate potential renal failure, which can increase the presence of a pulmonary edema. (Farha Munguti, 2020). We will compare this model to the original model based on loss, Pearson R correlation between measured and predicted NT-pro B-type natriuretic peptide (BNPP) values, the non-active prohormone that is released in response to changes in pressure inside the heart, and the Area Under the Curve (AUC).
 
 ## Introduction <a name="intro"></a>
