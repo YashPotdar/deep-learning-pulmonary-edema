@@ -15,7 +15,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 5000px;
+    height: 50;
     overflow-x: scroll;
     white-space: nowrap;
     background-color: #76b5c5;
@@ -35,7 +35,7 @@
 </style>
 
 
-```js
+<script>
 function scrollToSection(event, sectionId) {
   event.preventDefault();
   const section = document.getElementById(sectionId);
@@ -46,7 +46,8 @@ function scrollToSection(event, sectionId) {
   });
   event.target.classList.add('active');
 }
-```
+</script>
+
 
 
 # Deep Learning for Pulmonary Edema Prediction
