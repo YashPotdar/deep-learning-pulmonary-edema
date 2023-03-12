@@ -24,7 +24,7 @@
   .scrollable-outline ul {
     display: inline-block;
     margin: 0;
-    padding: 100;
+    padding: 300;
   }
 
   .scrollable-outline li {
@@ -36,16 +36,12 @@
 
 
 # Deep Learning for Pulmonary Edema Prediction
-{:.no_toc}
 
 ### David Davila, Yash Potdar, Marco Morocho
-{:.no_toc}
 
 ### UC San Diego 
-{:.no_toc}
 
 #### Advisor: Dr. Albert Hsiao 
-{:.no_toc}
 
 
 This is about as **barebones** as a Jekyll site can be. All I've done is embed a plotly plot here.
