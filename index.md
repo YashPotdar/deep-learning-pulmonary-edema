@@ -1,7 +1,7 @@
 <div class="scrollable-outline">
   <ul>
     <li><a href="#overview" onclick="scrollToSection('#overview')">Project Overview</a></li>
-    <li><a href="#intro" onclick="scrollToSection('#intro')">Introduction</a></li>
+    <li><a href="#" onclick="scrollToSection('#intro')">Introduction</a></li>
     <li><a href="#methods">Methods</a></li>
     <li><a href="#results">Results</a></li>
     <li><a href="#takeaways">Takeaways</a></li>
@@ -33,14 +33,6 @@
     font-size: 18px;
   }
 </style>
-
-<a href="#" onclick="scrollToSection('#section-id')">Scroll to section</a>
-
-<!-- section to scroll to -->
-<div id="section-id">
-  <h2>Section heading</h2>
-  <p>Section content</p>
-</div>
 
 <script>
   function scrollToSection(sectionId) {
