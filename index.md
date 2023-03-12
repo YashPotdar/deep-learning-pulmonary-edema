@@ -37,7 +37,7 @@
 </style>
 
 
-### David Davila, Yash Potdar, Marco Morocho
+### David Davila-Garcia, Yash Potdar, Marco Morocho
 
 ### UC San Diego 
 
