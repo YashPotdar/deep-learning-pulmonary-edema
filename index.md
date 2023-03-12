@@ -1,3 +1,4 @@
+  <link rel="stylesheet" href="styles.css">
 
   <div class="scrollable-outline">
   <ul>
@@ -42,8 +43,8 @@
 
 #### Advisor: Dr. Albert Hsiao 
   
-  <a href="https://www.example.com" class="button">Click me</a>
-
+  <a href="https://github.com/ddav118/DSC-180B" class="button">Project Repository</a>
+  <a href="https://github.com/ddav118/DSC-180B" class="button">View Poster</a>
 
 
 This is about as **barebones** as a Jekyll site can be. All I've done is embed a plotly plot here.
