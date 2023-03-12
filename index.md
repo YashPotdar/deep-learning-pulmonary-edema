@@ -45,7 +45,7 @@
   
  <div class="button-container">
   <a href="https://github.com/ddav118/DSC-180B"  target="_blank" class="button">Project Repository</a>
-  <a href="https://github.com/YashPotdar/deep-learning-pulmonary-edema/blob/main/A14-2.pdf"  target="_blank" class="button">View Poster</a>
+  <a href="https://github.com/YashPotdar/deep-learning-pulmonary-edema/blob/main/assets/DeepLearningEdemaPoster.pdf"  target="_blank" class="button">View Poster</a>
  </div>
 
 
