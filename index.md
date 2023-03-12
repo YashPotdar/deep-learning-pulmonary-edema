@@ -38,9 +38,9 @@
 
 <table style="margin:auto; border-collapse: collapse;">
   <tr>
-    <td style="border-right: 1px solid black;">Cell 1</td>
-    <td style="border-right: 1px solid black;">Cell 2</td>
-    <td>Cell 3</td>
+    <td style="border-right: 1px solid black;"<a href="https://www.linkedin.com/in/david-d%C3%A1vila-garc%C3%ADa-001/">David Davila-Garcia</a></td>
+    <td style="border-right: 1px solid black;"><a href="https://www.linkedin.com/in/yashmpotdar/">Yash Potdar</a></td>
+    <td><a href="https://www.linkedin.com/in/marco-morocho-0062641b9/">Marco Morocho</a></td>
   </tr>
   <tr>
     <td style="border-right: 1px solid black;">Cell 4</td>
