@@ -43,7 +43,6 @@
 
 <img src="assets/UCSanDiego_Halicioglu_BlueGold.png" alt="HDSI logo" height="100">
 
-<br>
   
  <div class="button-container">
   <a href="https://github.com/ddav118/DSC-180B"  target="_blank" class="button">Project Repository</a>
