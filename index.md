@@ -100,11 +100,9 @@ Add description about losses - train and test
 ### AUROC Curves <a name="auroc_subparagraph"></a>
 <iframe src="assets/ROC_Comparison.html" width=650 height=600 frameBorder=0></iframe>
 
-## Takeaways <a name="takeaways"></a>
 <h2 id="takeaways" class="jump-link-target">Takeaways</h2>
 Add description about Takeaways - Conclusion
 
-## Acknowledgments <a name="acknowledgments"></a>
 <h2 id="acknowledgments" class="jump-link-target">Acknowledgments</h2>
 Add refs
 
