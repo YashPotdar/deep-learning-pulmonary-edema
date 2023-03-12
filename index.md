@@ -13,17 +13,17 @@
   .scrollable-outline {
     position: fixed;
     top: 0;
-    left: 30;
+    left: 0;
     width: 100%;
     height: 50px;
     overflow-x: scroll;
     white-space: nowrap;
-    background-color: #e28743;
+    background-color: #76b5c5;
   }
 
   .scrollable-outline ul {
     display: inline-block;
-    margin: 0;
+    margin: 100;
     padding: 0;
   }
 
