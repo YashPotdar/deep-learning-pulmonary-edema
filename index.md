@@ -37,11 +37,11 @@
 </style>
 
 
-### David Davila-Garcia, Yash Potdar, Marco Morocho
+## David Davila-Garcia, Yash Potdar, Marco Morocho
 
 #### Advisor: Dr. Albert Hsiao 
 
-<img src="assets/UCSanDiego_Halicioglu_BlueGold.png" alt="HDSI logo">
+<img src="assets/UCSanDiego_Halicioglu_BlueGold.png" alt="HDSI logo" height="200">
 
   
  <div class="button-container">
