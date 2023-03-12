@@ -4,8 +4,9 @@ body {
   margin: 0 auto; /* Center the content horizontally */
 }
 
-#anchor {
-  scroll-margin-top: 500px;
+:target {
+  padding: 200px;
+  background-color: #ffffcc;
 }
 
 .button-container {
