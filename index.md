@@ -1,7 +1,7 @@
 <div class="scrollable-outline">
   <ul>
-    <li><a href="#overview">Project Overview</a></li>
-    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#overview" onclick="scrollToSection('#overview')">Project Overview</a></li>
+    <li><a href="#intro" onclick="scrollToSection('#intro')">Introduction</a></li>
     <li><a href="#methods">Methods</a></li>
     <li><a href="#results">Results</a></li>
     <li><a href="#takeaways">Takeaways</a></li>
@@ -33,6 +33,14 @@
     font-size: 18px;
   }
 </style>
+
+<script>
+  function scrollToSection(sectionId) {
+    document.querySelector(sectionId).scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+</script>
 
 
 # Deep Learning for Pulmonary Edema Prediction
