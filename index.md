@@ -102,6 +102,14 @@ Finally, we applied these masks to the given images to produce the segmented ima
 <h2 id="results" class="jump-link-target">Results</h2>
 Add description about Findings
 
+### Confusion Matrices <a name="confusion_matrices"></a>
+
+<iframe src="assets/ModelA_Confusion_Matrix.html" width=500 height=600 frameBorder=0></iframe>
+<iframe src="assets/ModelB_Confusion_Matrix.html" width=500 height=600 frameBorder=0></iframe>
+<iframe src="assets/ModelC_Confusion_Matrix.html" width=500 height=600 frameBorder=0></iframe>
+<iframe src="assets/ModelD_Confusion_Matrix.html" width=500 height=600 frameBorder=0></iframe>
+
+
 ### Losses <a name="losses_subparagraph"></a>
 Add description about losses - train and test
 
