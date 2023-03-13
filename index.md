@@ -75,6 +75,14 @@ Pulmonary edema is a condition in which there is an excess of fluid in the lungs
 <h2 id="intro" class="jump-link-target">Introduction</h2>
 Convolutional neural networks (CNNs) have been effective in classifying the presence of diseases in image data. In most cases, however, the data are labeled by physicians before being trained on, making this a supervised learning approach. Within the application of using chest radiographs to classify pulmonary edema, finding labeled data is often difficult due to how labor-intensive and subjective this process may be. Two radiologists may label mild cases of pulmonary edema differently since the indications of mild pulmonary edema would be Kerley B lines and peribronchial cuffing, which are more subtle. We can diagnose an individual with cardiogenic pulmonary edema if they have high B-type natriuretic peptide (BNP) and BNPP Based on scientific literature, the threshold for diagnosing cardiogenic pulmonary edema is BNPP > 400 or BNP > 100 (Kimand Januzzi Jr, 2011). A highly accurate neural network has the potential to save lives because cases can be diagnosed before symptoms worsen, allowing individuals with pulmonary edema to undergo the treatment they need. It will also be able to help individuals in Low and Middle-Income (LMIC) countries in which there may not be enough radiologists to interpret chest x-rays. In our replication of the model from the Deep Learning Radiographic Assessment of Pulmonary Edema paper by Justin Huynh et. al., we aimed to compare ResNet152 and VGG16 models to infer BNPP values from radiographs. However, with an existing lung image segmentation network, we are able to isolate each lung into two separate images, which we would then use our CNN models to train on. By having the original image, left lung, right lung, and combination of lungs with external data such as BMI, we hope this will allow us to better classify and quantify cardiogenic pulmonary edema. 
 
+|   NTproBNP |   log10_NTproBNP |   bmi |   creatinine |   pneumonia |   acute_heart_failure |   cardiogenic_edema |
+|-----------:|-----------------:|------:|-------------:|------------:|----------------------:|--------------------:|
+|      418   |          2.62118 | 25.51 |         0.61 |           1 |                     0 |                   1 |
+|     2161   |          3.33465 | 31.38 |         1.31 |           0 |                     0 |                   1 |
+|      118   |          2.07188 | 33.81 |         0.66 |           0 |                     0 |                   0 |
+|       49.9 |          1.6981  | 30.64 |         0.64 |           0 |                     0 |                   0 |
+|    20029   |          4.30166 | 34.81 |        10.54 |           0 |                     0 |                   1 |
+
 <h2 id="methods" class="jump-link-target">Methods</h2>
 Add description about Methods
 
@@ -105,8 +113,6 @@ Add description about Takeaways - Conclusion
 
 <h2 id="acknowledgments" class="jump-link-target">Acknowledgments</h2>
 Add refs
-
-<button type="button">Click Me!</button>
 
 
 <details>
