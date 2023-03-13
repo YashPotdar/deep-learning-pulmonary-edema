@@ -114,8 +114,6 @@ Add description about Takeaways - Conclusion
 <h2 id="acknowledgments" class="jump-link-target">Acknowledgments</h2>
 Add refs
 
-<button type="button">Click Me!</button>
-
 
 <details>
 <summary>Example Dropdown</summary>
