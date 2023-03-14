@@ -5,9 +5,9 @@
     <li><a href="#overview">Project Overview</a></li>
     <li><a href="#intro">Introduction</a></li>
     <li><a href="#methods">Methods</a></li>
-    <li><a href="#results">Results</a></li>
+    <li><a href="#findings">Findings</a></li>
     <li><a href="#takeaways">Takeaways</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>  
+    <li><a href="#conclusion">Conclusion</a></li>  
     <li><a href="#about_us">About Us</a></li>
   </ul>
 </div>
@@ -99,7 +99,7 @@ Finally, we applied these masks to the given images to produce the segmented ima
 
 
 
-<h2 id="results" class="jump-link-target">Results</h2>
+<h2 id="findings" class="jump-link-target">Findings</h2>
 Add description about Findings
 
 <center> <img src="assets/Capstone Diagrams - Results.png" alt="Test Set Results" height="400"></center>
@@ -135,6 +135,11 @@ From our results above, it is apparent that a more complex and preprocessed inpu
 - The dataset size may have been sufficient for the neural network to distinguish normal and edema cases without the need for segmentation.  With around 13,000 training images, there was enough data for the neural network to learn the features that distinguish normal and edema cases in the lung and heart regions. A smaller dataset may benefit from segmentation as it provides more focused input and could help the neural network to learn the relevant features more accurately. Segmentation may yield a better classifier, in this case, due to the lack of the neural network’s ability to have enough data to focus on the heart and lungs.
 
 Overall, while we had expected segmentation to improve the classifier's accuracy, our results suggest that it may not always be necessary or beneficial depending on the dataset size and the neural network's ability to learn relevant features.
+
+
+<h2 id="conclusion" class="jump-link-target">Conclusion</h2>
+This project demonstrates the relevance of considering confounding factors, clinical data, and image segmentation when training CNN models to diagnose CPE from chest radiographs. This project potentially has a strong impact because a highly accurate neural network can diagnose cases of CPE before symptoms worsen, allowing individuals to undergo early treatment. This could increase equity and allow individuals with reduced access to healthcare receive timely diagnoses. While an increase in CNN model performance was observed from adding clinical data, no such change was observed from heart and lung segmentation. Further research is needed to determine the optimal use of image segmentation in CNN models.
+
 
 <h2 id="acknowledgments" class="jump-link-target">Acknowledgments</h2>
 We would like to thank our mentor, Dr. Albert Hsiao, for his guidance and feedback throughout the duration of this project. We would also like to thank Amin Mahmoodi in the UCSD AIDA lab for sharing the lung and heart segmentation network with us. Finally, we would like to thank our fellow students in our capstone section who we were able to learn from and collaborate with throughout the last six months.
