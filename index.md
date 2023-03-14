@@ -138,7 +138,7 @@ Add description about losses - train and test
 ### AUROC Curves <a name="auroc_subparagraph"></a>
 <iframe src="assets/ROC_Comparison.html" width=1100 height=800 frameBorder=0></iframe>
 
-<h2 id="takeaways" >Takeaways</h2>
+<h2 id="takeaways" class="jump-link-target">Takeaways</h2>
 From our results above, it is apparent that a more complex and preprocessed input did not improve the ability of the classifier to identify cases of pulmonary edema. We had hypothesized that image segmentation of X-rays would help focus the neural network on the lungs and heart regions, which is where edema occurs. We believed by reducing noise in the input, the classifier would be able to better distinguish normal and edema cases. However, segmentation did not improve performance. We propose two possible reasons for these findings:
 
 - The neural network already focuses on the relevant regions of the X-rays where edema occurs. Due to this, providing segmented images is not necessarily adding information to the ResNet152 model, but is instead cropping information out when it is passed to the network. 
