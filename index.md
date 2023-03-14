@@ -103,6 +103,7 @@ Finally, we applied these masks to the given images to produce the segmented ima
 <h2 id="results" class="jump-link-target">Results</h2>
 Add description about Findings
 <img src="assets/Capstone Diagrams - Results.png" alt="Test Set Results" height="400" class="center">
+<center> <img src="assets/Capstone Diagrams - Results.png" alt="Test Set Results" height="400"></center>
 
 
 ### Confusion Matrices <a name="confusion_matrices"></a>
