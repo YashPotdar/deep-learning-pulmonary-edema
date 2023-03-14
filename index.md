@@ -125,7 +125,7 @@ Add description about Findings
 Add description about losses - train and test
 
 ### AUROC Curves <a name="auroc_subparagraph"></a>
-<iframe src="assets/ROC_Comparison.html" width=650 height=600 frameBorder=0></iframe>
+<iframe src="assets/ROC_Comparison.html" width=800 height=600 frameBorder=0></iframe>
 
 <h2 id="takeaways" class="jump-link-target">Takeaways</h2>
 Add description about Takeaways - Conclusion
