@@ -1,6 +1,4 @@
  <link rel="stylesheet" href="styles.css">
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
   <div class="scrollable-outline">
   <ul>
@@ -86,9 +84,10 @@ We constructed a dataset of 16,619 records from UCSD Health patients. The datase
 
 The `NT-proBNP` column represents the NT-proBNP value, a continuously valued biomarker measured from blood serum samples. As seen in the distribution below, there is a strong right skew due to the abnormally high NT-proBNP values. We performed a log transformation to create the `log10_NTproBNP` column. Using the threshold for pulmonary edema established in Huynh’s paper and prior work, we classified any patient with an NT-proBNP value of at least $400 pg/mL$ as an edema case. Any records with a log NT-proBNP value of at least $2.602$ are considered edema cases. 
 
-<span class="tex2jax_ignore">y = mx^2 + b</span>
+This sentence uses `$` delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
 
-The `bmi` column contained the body mass index (<span class="tex2jax_ignore">kg/m^2</span>) of the patient, which is derived from a patient’s mass and height. The ‘creatinine’ column contains a continuous value of creatinine level ($mg/dL$) measured from blood serum samples. The `pneumonia` and `acute_heart_failure` columns contain binary values and are 1 if a patient has the condition. In the dataset, 12.0% of patients have pneumonia and 17.2% have acute heart failure. The distributions of the quantitative features are shown below.
+
+The `bmi` column contained the body mass index ($kg/m^2$) of the patient, which is derived from a patient’s mass and height. The ‘creatinine’ column contains a continuous value of creatinine level ($mg/dL$) measured from blood serum samples. The `pneumonia` and `acute_heart_failure` columns contain binary values and are 1 if a patient has the condition. In the dataset, 12.0% of patients have pneumonia and 17.2% have acute heart failure. The distributions of the quantitative features are shown below.
 
 The target column (`cardiogenic_edema`) contains binary values which are 1 if a patient has CPE. Around 64.7% of the records in our dataset had CPE based on the threshold. 
 
@@ -185,7 +184,3 @@ We would like to thank our mentor, Dr. Albert Hsiao, for his guidance and feedba
     <td>Pic 3</td>
   </tr>
 </table>
-
-<script>
-  MathJax.typeset();
-</script>
