@@ -66,7 +66,6 @@ Convolutional neural networks (CNNs) have been effective in classifying the pres
 
 <h2 id="data" class="jump-link-target">Data</h2>
 
-<div style="width:300px">
 |   NTproBNP |   log10_NTproBNP |   bmi |   creatinine |   pneumonia |   acute_heart_failure |   cardiogenic_edema |
 |-----------:|-----------------:|------:|-------------:|------------:|----------------------:|--------------------:|
 |      418   |          2.62118 | 25.51 |         0.61 |           1 |                     0 |                   1 |
@@ -74,7 +73,6 @@ Convolutional neural networks (CNNs) have been effective in classifying the pres
 |      118   |          2.07188 | 33.81 |         0.66 |           0 |                     0 |                   0 |
 |       49.9 |          1.6981  | 30.64 |         0.64 |           0 |                     0 |                   0 |
 |    20029   |          4.30166 | 34.81 |        10.54 |           0 |                     0 |                   1 |
-</div>
 
 <iframe src="assets/BNPP_dist.html" width=900 height=630 frameBorder=0></iframe>
 <iframe src="assets/logBNPP_dist.html" width=900 height=630 frameBorder=0></iframe>
@@ -133,7 +131,7 @@ Add description about losses - train and test
 ### AUROC Curves <a name="auroc_subparagraph"></a>
 <iframe src="assets/ROC_Comparison.html" width=1100 height=800 frameBorder=0></iframe>
 
-<h2 id="takeaways" class="jump-link-target">Takeaways</h2>
+<h2 id="takeaways" >Takeaways</h2>
 From our results above, it is apparent that a more complex and preprocessed input did not improve the ability of the classifier to identify cases of pulmonary edema. We had hypothesized that image segmentation of X-rays would help focus the neural network on the lungs and heart regions, which is where edema occurs. We believed by reducing noise in the input, the classifier would be able to better distinguish normal and edema cases. However, segmentation did not improve performance. We propose two possible reasons for these findings:
 
 - The neural network already focuses on the relevant regions of the X-rays where edema occurs. Due to this, providing segmented images is not necessarily adding information to the ResNet152 model, but is instead cropping information out when it is passed to the network. 
