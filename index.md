@@ -128,14 +128,19 @@ Add description about losses - train and test
 <iframe src="assets/ROC_Comparison.html" width=1100 height=800 frameBorder=0></iframe>
 
 <h2 id="takeaways" class="jump-link-target">Takeaways</h2>
-Add description about Takeaways - Conclusion
+From our results above, it is apparent that a more complex and preprocessed input did not improve the ability of the classifier to identify cases of pulmonary edema. We had hypothesized that image segmentation of X-rays would help focus the neural network on the lungs and heart regions, which is where edema occurs. We believed by reducing noise in the input, the classifier would be able to better distinguish normal and edema cases. However, segmentation did not improve performance. We propose two possible reasons for these findings:
+
+- The neural network already focuses on the relevant regions of the X-rays where edema occurs. Due to this, providing segmented images is not necessarily adding information to the ResNet152 model, but is instead cropping information out when it is passed to the network. 
+
+- The dataset size may have been sufficient for the neural network to distinguish normal and edema cases without the need for segmentation.  With around 13,000 training images, there was enough data for the neural network to learn the features that distinguish normal and edema cases in the lung and heart regions. A smaller dataset may benefit from segmentation as it provides more focused input and could help the neural network to learn the relevant features more accurately. Segmentation may yield a better classifier, in this case, due to the lack of the neural network’s ability to have enough data to focus on the heart and lungs.
+
+Overall, while we had expected segmentation to improve the classifier's accuracy, our results suggest that it may not always be necessary or beneficial depending on the dataset size and the neural network's ability to learn relevant features.
 
 <h2 id="acknowledgments" class="jump-link-target">Acknowledgments</h2>
-Add refs
+We would like to thank our mentor, Dr. Albert Hsiao, for his guidance and feedback throughout the duration of this project. We would also like to thank Amin Mahmoodi in the UCSD AIDA lab for sharing the lung and heart segmentation network with us. Finally, we would like to thank our fellow students in our capstone section who we were able to learn from and collaborate with throughout the last six months.
 
 
 ---
-
 ---
 
 <h2 id="about_us" class="jump-link-target">About Us</h2>
