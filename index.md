@@ -70,10 +70,10 @@ Convolutional neural networks (CNNs) have been effective in classifying the pres
 |       49.9 |          1.6981  | 30.64 |         0.64 |           0 |                     0 |                   0 |
 |    20029   |          4.30166 | 34.81 |        10.54 |           0 |                     0 |                   1 |
 
-<iframe src="assets/BNPP_dist.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="assets/logBNPP_dist.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="assets/bmi_dist.html" width=800 height=600 frameBorder=0></iframe>
-<iframe src="assets/creatinine_dist.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/BNPP_dist.html" width=900 height=760 frameBorder=0></iframe>
+<iframe src="assets/logBNPP_dist.html" width=900 height=760 frameBorder=0></iframe>
+<iframe src="assets/bmi_dist.html" width=900 height=760 frameBorder=0></iframe>
+<iframe src="assets/creatinine_dist.html" width=900 height=760 frameBorder=0></iframe>
 
 
 <h2 id="methods" class="jump-link-target">Methods</h2>
@@ -125,7 +125,7 @@ Add description about Findings
 Add description about losses - train and test
 
 ### AUROC Curves <a name="auroc_subparagraph"></a>
-<iframe src="assets/ROC_Comparison.html" width=1100 height=600 frameBorder=0></iframe>
+<iframe src="assets/ROC_Comparison.html" width=1100 height=800 frameBorder=0></iframe>
 
 <h2 id="takeaways" class="jump-link-target">Takeaways</h2>
 Add description about Takeaways - Conclusion
