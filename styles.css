@@ -50,3 +50,10 @@ table td {
   padding-top: 50px; /* padding to fix being hidden from top header */
   margin-top: 0px; /* counteract padding */
 }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
