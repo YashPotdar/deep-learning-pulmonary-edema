@@ -83,6 +83,12 @@ Convolutional neural networks (CNNs) have been effective in classifying the pres
 |       49.9 |          1.6981  | 30.64 |         0.64 |           0 |                     0 |                   0 |
 |    20029   |          4.30166 | 34.81 |        10.54 |           0 |                     0 |                   1 |
 
+<iframe src="assets/BNPP_dist.html" width=700 height=600 frameBorder=0></iframe>
+<iframe src="assets/logBNPP_hist.html" width=700 height=600 frameBorder=0></iframe>
+<iframe src="assets/bmi_dist.html" width=700 height=600 frameBorder=0></iframe>
+<iframe src="assets/creatinine_dist.html" width=700 height=600 frameBorder=0></iframe>
+
+
 <h2 id="methods" class="jump-link-target">Methods</h2>
 Add description about Methods
 
