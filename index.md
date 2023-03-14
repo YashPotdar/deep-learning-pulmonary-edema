@@ -83,7 +83,7 @@ Convolutional neural networks (CNNs) have been effective in classifying diseases
 - **Lung and Heart Segmentation**: We will use transfer learning with an image segmentation model to isolate the heart and lungs of an X-ray image. We believe this reduces noise and focuses the network on the regions where edema would reside.
 
 <h2 id="data" class="jump-link-target">Data</h2>
-We constructed a dataset of 16,619 records from UCSD Health patients. The dataset initially provided by the UCSD Artificial Intelligence and Data Analytics (AIDA) Lab had 18,900 records, but we dropped rows with missing clinical data. We also removed the unique identifiers for patients.
+We constructed a dataset of 16,619 records from UC San Diego (UCSD) Health patients. The dataset initially provided by the UCSD Artificial Intelligence and Data Analytics (AIDA) Lab had 18,900 records, but we dropped rows with missing clinical data. We also removed the unique identifiers for patients.
 
 |   NTproBNP |   log10_NTproBNP |   bmi |   creatinine |   pneumonia |   acute_heart_failure |   cardiogenic_edema |
 |-----------:|-----------------:|------:|-------------:|------------:|----------------------:|--------------------:|
@@ -112,35 +112,29 @@ We trained four modified ResNet152 CNN architectures with differing inputs: (A) 
 To ensure high-quality data for our project, we excluded patients with missing values for columns containing clinical data, specifically BMI, creatinine, pneumonia, and acute heart failure. These values which have been identified as confounds for CPE would be appended to the feature vector within the ResNet152 CNN.
 
 ### Input: Lung & Heart Image Segmentation <a name="segmentation_subparagraph"></a>
-The UC San Diego AIDA laboratory provided us with a pre-trained U-Net CNN, which creates predicted binary masks of the right and left lungs, heart, right and left clavicle, and spinal column for each patient's X-ray. A left lung mask, as seen in the diagram below, has a value of 1 for pixels representing part of the left lung, and 0 otherwise. Masks can be combined using an `OR` operation, which yields a value of 1 when either mask has a value of 1, and 0 otherwise. In order to segment an image, we would simply multiply the binary mask to the image, which would yield an image with pixels corresponding to the 1’s in a mask.
+The UCSD AIDA laboratory provided us with a pre-trained U-Net CNN, which creates predicted binary masks of the right and left lungs, heart, right and left clavicle, and spinal column for each patient's X-ray. A left lung mask, as seen in the diagram below, has a value of 1 for pixels representing part of the left lung, and 0 otherwise. Masks can be combined using an `OR` operation, which yields a value of 1 when either mask has a value of 1, and 0 otherwise. In order to segment an image, we would simply multiply the binary mask to the image, which would yield an image with pixels corresponding to the 1’s in a mask.
 
 In our segmentation process, we applied the pre-trained model to the full dataset of X-rays. We then used the binary masks to create two segmented images of the lungs and heart. The segmentation process is visualized in the following figure, where we begin with the original radiograph, generate masks of the lungs and heart regions, and apply it over the radiograph to isolate the lungs and heart.
 <center><img src="assets/Capstone Diagrams - Segmentation.png" alt="Segmentation in Action" ></center>
 
 ### Model Architectures <a name="architectures_subparagraph"></a>
 We used the default PyTorch ResNet152 model with a regression output since we were predicting `log10_NTproBNP` values. By using the classification threshold for `log10_NTproBNP` of 2.602, we were able to make a classification output. The four architectures, which differ by their inputs, are shown below:
-- Model A: 
+- **Model A**: original X-rays
 <center><img src="assets/Capstone Diagrams - Model1_log_output.png" alt="Model 1 Architecture" > </center>
-- Model B: 
+- **Model B**: original X-rays + clinical data
+-- Concatenates the clinical data with the output from the convolutional layers
 <center><img src="assets/Capstone Diagrams - Model2_log_output.png" alt="Model 2 Architecture" ></center>
-- Model C: 
+- **Model C**: original X-rays + lung segmentations + heart segmentations
 <center><img src="assets/Capstone Diagrams - Model3_log_output.png" alt="Model 3 Architecture" ></center>
-- Model D: 
+- **Model D**: original X-rays + lung segmentations + heart segmentations + clinical data
+-- Concatenates the clinical data with the output from the convolutional layers
 <center><img src="assets/Capstone Diagrams - Model4_log_output.png" alt="Model 4 Architecture" ></center>
 
 ### Model Training & Testing <a name="train_test_subparagraph"></a>
-Model Training & Testing
-
-
-### Lung Segmentation <a name="segment_subparagraph"></a>
-The lung segmentation network, given an input of a radiograph, would output six segmented images: right lung, left lung, heart, right clavicle, left clavicle, and spinal column. As seen in Figure TODO below, we can see six masks, one for each segment. The last image shows an overlaid graph of the segments, which was interesting to visualize, but not used for segmenting the images since it did not serve as a mask. Image masks should just be binary, such that multiplying the mask to an image will return the segment of interest from the original image.
-
-Since edema is present in the lungs and a portion of the lungs are behind the heart, we decided to create a mask that combined the lung and heart segments. To create this, we used the numpy OR operator to include all the areas where the pixel value was 1. This yielded masks of the area of interest as seen in Figure TODO.
-
-Finally, we applied these masks to the given images to produce the segmented images with area of interest. By simply multiplying the mask to the original image, we were able to produce an accurate isolated image of the lungs and heart. In Figure TODO, we can see examples of original images and their segmented counterparts, which would subsequently be fed into our neural network.
+All four models were trained on the training set for 20 epochs using the Nadam optimizer with a learning rate of 0.001, and the mean absolute error (MAE) was used as the loss function to evaluate the neural network. The MAE on the validation set was computed after each epoch, and early stopping was implemented such that the model with the minimum MAE on the validation set was saved. After 20 epochs, the MAE on the unseen test set was computed for the four models with the minimum MAE on the validation set. We saved the predicted `log10_NTproBNP` values for each patient in the test set and compared these to the laboratory-measured values to evaluate our models. 
 
 <h2 id="findings" class="jump-link-target">Findings</h2>
-Add description about Findings
+We plotted these predictions against the laboratory-measured values for `log10_NTproBNP` and calculated the Pearson correlation coefficient (r) to. We used the threshold for cardiogenic pulmonary edema diagnosis to binarize each model's predicted values of log10(NT-proBNP) and calculated accuracy and AUC using the test set. We created confusion matrices and AUC-ROC curves for all four models and used these metrics to compare performance. The goal of the unseen test set was to provide an unbiased estimate of model performance after training.
 
 <center> <img src="assets/Capstone Diagrams - Results.png" alt="Test Set Results" height="400"></center>
 
