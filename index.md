@@ -72,6 +72,7 @@ Convolutional neural networks (CNNs) have been effective in classifying diseases
 - **Lung and Heart Segmentation**: We will use transfer learning with an image segmentation model to isolate the heart and lungs of an X-ray image. We believe this reduces noise and focuses the network on the regions where edema would reside.
 
 <h2 id="data" class="jump-link-target">Data</h2>
+We constructed a dataset of 16,619 records from UCSD Health patients. The dataset initially provided by the UCSD Artificial Intelligence and Data Analytics (AIDA) Lab had 18,900 records, but we dropped rows with missing clinical data. We also removed the unique identifiers for patients.
 
 |   NTproBNP |   log10_NTproBNP |   bmi |   creatinine |   pneumonia |   acute_heart_failure |   cardiogenic_edema |
 |-----------:|-----------------:|------:|-------------:|------------:|----------------------:|--------------------:|
@@ -80,6 +81,12 @@ Convolutional neural networks (CNNs) have been effective in classifying diseases
 |      118   |          2.07188 | 33.81 |         0.66 |           0 |                     0 |                   0 |
 |       49.9 |          1.6981  | 30.64 |         0.64 |           0 |                     0 |                   0 |
 |    20029   |          4.30166 | 34.81 |        10.54 |           0 |                     0 |                   1 |
+
+The `NT-proBNP` column represents the NT-proBNP value, a continuously valued biomarker measured from blood serum samples. As seen in the distribution below, there is a strong right skew due to the abnormally high NT-proBNP values. We performed a log transformation to create the `log10_NTproBNP` column. Using the threshold for pulmonary edema established in Huynh’s paper and prior work, we classified any patient with an NT-proBNP value of at least 400 pg/mL as an edema case. Any records with a log NT-proBNP value of at least 2.602 are considered edema cases. 
+
+The `bmi` column contained the body mass index (kg/m^2) of the patient, which is derived from a patient’s mass and height. The ‘creatinine’ column contains a continuous value of creatinine level (mg/dL) measured from blood serum samples. The `pneumonia` and `acute_heart_failure` columns contain binary values and are 1 if a patient has the condition. In the dataset, 12.0% of patients have pneumonia and 17.2% have acute heart failure. The distributions of the quantitative features are shown below.
+
+The target column (`cardiogenic_edema`) contains binary values which are 1 if a patient has CPE. Around 64.7% of the records in our dataset had CPE based on the threshold. 
 
 <iframe src="assets/BNPP_dist.html" width=900 height=630 frameBorder=0></iframe>
 <iframe src="assets/logBNPP_dist.html" width=900 height=630 frameBorder=0></iframe>
