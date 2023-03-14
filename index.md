@@ -114,10 +114,10 @@ Add description about Findings
 
 ### Pearson R Correlation Comparison <a name="correlation"></a>
 
-<iframe src="assets/ModelA_Correlation.html" width=700 height=600 frameBorder=0></iframe>
-<iframe src="assets/ModelB_Correlation.html" width=700 height=600 frameBorder=0></iframe>
-<iframe src="assets/ModelC_Correlation.html" width=700 height=600 frameBorder=0></iframe>
-<iframe src="assets/ModelD_Correlation.html" width=700 height=600 frameBorder=0></iframe>
+<iframe src="assets/ModelA_Correlation.html" width=700 height=600 frameBorder=1></iframe>
+<iframe src="assets/ModelB_Correlation.html" width=700 height=600 frameBorder=1></iframe>
+<iframe src="assets/ModelC_Correlation.html" width=700 height=600 frameBorder=1></iframe>
+<iframe src="assets/ModelD_Correlation.html" width=700 height=600 frameBorder=1></iframe>
 
 
 
