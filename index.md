@@ -128,11 +128,13 @@ Add refs
 
 
 <h2 id="about_us" class="jump-link-target">About Us</h2>
-<details>
+<details class="button">
     <summary>Example dropdown</summary>
     <br>
     Here are some hairy, scary details.
 </details>
+
+<a href="https://github.com/YashPotdar/deep-learning-pulmonary-edema/blob/main/assets/DeepLearningEdemaPoster.pdf"  target="_blank" class="button">View Poster</a>
 
 <table style="margin:auto; border-collapse: collapse;">
   <tr>
