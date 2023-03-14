@@ -107,17 +107,17 @@ Add description about Findings
 
 ### Confusion Matrices <a name="confusion_matrices"></a>
 
-<iframe src="assets/ModelA_Confusion_Matrix.html" width=700 height=600 frameBorder=1></iframe>
-<iframe src="assets/ModelB_Confusion_Matrix.html" width=700 height=600 frameBorder=1></iframe>
-<iframe src="assets/ModelC_Confusion_Matrix.html" width=700 height=600 frameBorder=1></iframe>
-<iframe src="assets/ModelD_Confusion_Matrix.html" width=700 height=600 frameBorder=1></iframe>
+<iframe src="assets/ModelA_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
+<iframe src="assets/ModelB_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
+<iframe src="assets/ModelC_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
+<iframe src="assets/ModelD_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
 
 ### Pearson R Correlation Comparison <a name="correlation"></a>
 
-<iframe src="assets/ModelA_Correlation.html" width=700 height=600 frameBorder=1></iframe>
-<iframe src="assets/ModelB_Correlation.html" width=700 height=600 frameBorder=1></iframe>
-<iframe src="assets/ModelC_Correlation.html" width=700 height=600 frameBorder=1></iframe>
-<iframe src="assets/ModelD_Correlation.html" width=700 height=600 frameBorder=1></iframe>
+<iframe src="assets/ModelA_Correlation.html" width=700 height=600 frameBorder=0></iframe>
+<iframe src="assets/ModelB_Correlation.html" width=700 height=600 frameBorder=0></iframe>
+<iframe src="assets/ModelC_Correlation.html" width=700 height=600 frameBorder=0></iframe>
+<iframe src="assets/ModelD_Correlation.html" width=700 height=600 frameBorder=0></iframe>
 
 
 
