@@ -93,7 +93,7 @@ We constructed a dataset of 16,619 records from UCSD Health patients. The datase
 |       49.9 |          1.6981  | 30.64 |         0.64 |           0 |                     0 |                   0 |
 |    20029   |          4.30166 | 34.81 |        10.54 |           0 |                     0 |                   1 |
 
-The `NT-proBNP` column represents the NT-proBNP value, a continuously valued biomarker measured from blood serum samples. As seen in the distribution below, there is a strong right skew due to the abnormally high NT-proBNP values. We performed a log transformation to create the `log10_NTproBNP` column. Using the threshold for pulmonary edema established in Huynh’s paper and prior work, we classified any patient with an NT-proBNP value of at least $400 pg/mL$ as an edema case. Any records with a log NT-proBNP value of at least $2.602$ are considered edema cases. 
+The `NT-proBNP` column represents the NT-proBNP value, a continuously valued biomarker measured from blood serum samples. As seen in the distribution below, there is a strong right skew due to the abnormally high NT-proBNP values. We performed a log transformation to create the `log10_NTproBNP` column. Using the threshold for pulmonary edema established in Huynh’s paper and prior work, we classified any patient with an NT-proBNP value of at least $400 pg/mL$ as an edema case. Any records with a log NT-proBNP value of at least $2.602$ ($log_10 400$) are considered edema cases. 
 
 The `bmi` column contained the body mass index ($kg/m^2$) of the patient, which is derived from a patient’s mass and height. The ‘creatinine’ column contains a continuous value of creatinine level ($mg/dL$) measured from blood serum samples. The `pneumonia` and `acute_heart_failure` columns contain binary values and are 1 if a patient has the condition. In the dataset, 12.0% of patients have pneumonia and 17.2% have acute heart failure. The distributions of the quantitative features are shown below.
 
@@ -109,16 +109,23 @@ The target column (`cardiogenic_edema`) contains binary values which are 1 if a 
 We trained four modified ResNet152 CNN architectures with differing inputs: (A) Original Radiographs only, (B) Original Radiographs + Clinical Data, (C) Original Radiographs + Heart & Lung Segmentations, and (D) Original Radiographs + Heart & Lung Segmentations + Clinical Data. The data were randomly split into train, validation, and test sets at a ratio of 80%/10%/10%. The four model’s accuracy and AUC on the test set (n = 1,662) were used to compare model performance.
 
 ### Input: Clinical Data <a name="clinical_subparagraph"></a>
-Clinical Data
+To ensure high-quality data for our project, we excluded patients with missing values for columns containing clinical data, specifically BMI, creatinine, pneumonia, and acute heart failure. These values which have been identified as confounds for CPE would be appended to the feature vector within the ResNet152 CNN.
 
 ### Input: Lung & Heart Image Segmentation <a name="segmentation_subparagraph"></a>
-Lung & Heart Image Segmentation
+The UC San Diego AIDA laboratory provided us with a pre-trained U-Net CNN, which creates predicted binary masks of the right and left lungs, heart, right and left clavicle, and spinal column for each patient's X-ray. A left lung mask, as seen in the diagram below, has a value of 1 for pixels representing part of the left lung, and 0 otherwise. Masks can be combined using an `OR` operation, which yields a value of 1 when either mask has a value of 1, and 0 otherwise. In order to segment an image, we would simply multiply the binary mask to the image, which would yield an image with pixels corresponding to the 1’s in a mask.
+
+In our segmentation process, we applied the pre-trained model to the full dataset of X-rays. We then used the binary masks to create two segmented images of the lungs and heart. The segmentation process is visualized in the following figure, where we begin with the original radiograph, generate masks of the lungs and heart regions, and apply it over the radiograph to isolate the lungs and heart.
+<center><img src="assets/Capstone Diagrams - Segmentation.png" alt="Segmentation in Action" ></center>
 
 ### Model Architectures <a name="architectures_subparagraph"></a>
-ResNet152 Architectures
+We used the default PyTorch ResNet152 model with a regression output since we were predicting `log10_NTproBNP` values. By using the classification threshold for `log10_NTproBNP` of 2.602, we were able to make a classification output. The four architectures, which differ by their inputs, are shown below:
+- Model A: 
 <center><img src="assets/Capstone Diagrams - Model1.png" alt="Model 1 Architecture" > </center>
+- Model B: 
 <center><img src="assets/Capstone Diagrams - Model2.png" alt="Model 2 Architecture" ></center>
+- Model C: 
 <center><img src="assets/Capstone Diagrams - Model3.png" alt="Model 3 Architecture" ></center>
+- Model D: 
 <center><img src="assets/Capstone Diagrams - Model4.png" alt="Model 4 Architecture" ></center>
 
 ### Model Training & Testing <a name="train_test_subparagraph"></a>
@@ -131,7 +138,6 @@ The lung segmentation network, given an input of a radiograph, would output six 
 Since edema is present in the lungs and a portion of the lungs are behind the heart, we decided to create a mask that combined the lung and heart segments. To create this, we used the numpy OR operator to include all the areas where the pixel value was 1. This yielded masks of the area of interest as seen in Figure TODO.
 
 Finally, we applied these masks to the given images to produce the segmented images with area of interest. By simply multiplying the mask to the original image, we were able to produce an accurate isolated image of the lungs and heart. In Figure TODO, we can see examples of original images and their segmented counterparts, which would subsequently be fed into our neural network.
-<center><img src="assets/Capstone Diagrams - Segmentation.png" alt="Segmentation in Action" ></center>
 
 <h2 id="findings" class="jump-link-target">Findings</h2>
 Add description about Findings
