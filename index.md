@@ -93,7 +93,7 @@ We constructed a dataset of 16,619 records from UCSD Health patients. The datase
 |       49.9 |          1.6981  | 30.64 |         0.64 |           0 |                     0 |                   0 |
 |    20029   |          4.30166 | 34.81 |        10.54 |           0 |                     0 |                   1 |
 
-The `NT-proBNP` column represents the NT-proBNP value, a continuously valued biomarker measured from blood serum samples. As seen in the distribution below, there is a strong right skew due to the abnormally high NT-proBNP values. We performed a log transformation to create the `log10_NTproBNP` column. Using the threshold for pulmonary edema established in Huynh’s paper and prior work, we classified any patient with an NT-proBNP value of at least $400 pg/mL$ as an edema case. Any records with a log NT-proBNP value of at least $2.602$ ($log_10 400$) are considered edema cases. 
+The `NT-proBNP` column represents the NT-proBNP value, a continuously valued biomarker measured from blood serum samples. As seen in the distribution below, there is a strong right skew due to the abnormally high NT-proBNP values. We performed a log transformation to create the `log10_NTproBNP` column. Using the threshold for pulmonary edema established in Huynh’s paper and prior work, we classified any patient with an NT-proBNP value of at least $400 pg/mL$ as an edema case. Any records with a log NT-proBNP value of at least $2.602$ ($log_{10} 400$) are considered edema cases. 
 
 The `bmi` column contained the body mass index ($kg/m^2$) of the patient, which is derived from a patient’s mass and height. The ‘creatinine’ column contains a continuous value of creatinine level ($mg/dL$) measured from blood serum samples. The `pneumonia` and `acute_heart_failure` columns contain binary values and are 1 if a patient has the condition. In the dataset, 12.0% of patients have pneumonia and 17.2% have acute heart failure. The distributions of the quantitative features are shown below.
 
@@ -120,13 +120,13 @@ In our segmentation process, we applied the pre-trained model to the full datase
 ### Model Architectures <a name="architectures_subparagraph"></a>
 We used the default PyTorch ResNet152 model with a regression output since we were predicting `log10_NTproBNP` values. By using the classification threshold for `log10_NTproBNP` of 2.602, we were able to make a classification output. The four architectures, which differ by their inputs, are shown below:
 - Model A: 
-<center><img src="assets/Capstone Diagrams - Model1.png" alt="Model 1 Architecture" > </center>
+<center><img src="assets/Capstone Diagrams - Model1_log_output.png" alt="Model 1 Architecture" > </center>
 - Model B: 
-<center><img src="assets/Capstone Diagrams - Model2.png" alt="Model 2 Architecture" ></center>
+<center><img src="assets/Capstone Diagrams - Model2_log_output.png" alt="Model 2 Architecture" ></center>
 - Model C: 
-<center><img src="assets/Capstone Diagrams - Model3.png" alt="Model 3 Architecture" ></center>
+<center><img src="assets/Capstone Diagrams - Model3_log_output.png" alt="Model 3 Architecture" ></center>
 - Model D: 
-<center><img src="assets/Capstone Diagrams - Model4.png" alt="Model 4 Architecture" ></center>
+<center><img src="assets/Capstone Diagrams - Model4_log_output.png" alt="Model 4 Architecture" ></center>
 
 ### Model Training & Testing <a name="train_test_subparagraph"></a>
 Model Training & Testing
