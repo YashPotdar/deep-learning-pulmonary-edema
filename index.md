@@ -143,7 +143,7 @@ The table below exhibits the ResNet152 model performances by input data, includi
 
 ### AUC-ROC Comparison <a name="auroc_subparagraph"></a>
 The AUC-ROC Curves below displays the ROC curves of each ResNet152 model by Input Data. ROC curves display the performance of a binary classifier at multiple thresholds, and better classifiers will have more area under the curve. It can be seen that both Model B and Model D performed better than Model A and Model C since they have greater areas under the curve. Model B achieved the highest AUC score of 0.869 among all models.
-<iframe src="assets/ROC_Comparison.html" width=1100 height=800 frameBorder=0></iframe>
+<iframe src="assets/ROC_Comparison.html" width=1100 height=800 frameBorder=1></iframe>
 
 ### Pearson R Correlation Comparison <a name="correlation"></a>
 The performance of the models can also be seen in the Pearson correlation scatterplots. These plots represent how well the predicted `log10_NTproBNP` correspond to the actual `log10_NTproBNP` values. Where the red line of $y=x$ represents a perfect model, it can be seen that both Models B and D best follow that line, with correlations of 0.739 and 0.738, respectively. Although there is not a significant difference in the correlation coefficient between these two models, they outperform the other two models.
