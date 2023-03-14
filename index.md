@@ -44,15 +44,15 @@
 
 <img src="assets/UCSanDiego_Halicioglu_BlueGold.png" alt="HDSI logo" height="100">
 
-  
-  <a href="https://github.com/ddav118/DSC-180B"  target="_blank" class="button">Project Repository</a>
-  
+ <div class="button-container">  
   <details class="button">
     <summary>View Poster</summary>
     <br>
     <img src="assets/DeepLearningEdemaPoster.png" alt="Poster Presentation" >
 </details>
   
+  <a href="https://github.com/ddav118/DSC-180B"  target="_blank" class="button">Project Repository</a>
+  </div>
 
 
 
