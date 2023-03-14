@@ -68,7 +68,7 @@ Current methods of diagnosis for CPE depend on radiologists manually examining X
 Convolutional neural networks (CNNs) have been effective in classifying diseases from medical images. In this project, we aim to build upon the methods used by Justin Huynh in “Deep Learning Radiographic Assessment of Pulmonary Edema”. This paper demonstrated the potential of CNNs in diagnosing CPE by training them on chest radiographs and NT-proBNP, a clinical biomarker measured from blood serum. In this study, we examine the effects of the addition of clinical data and image segmentation. We believe the addition of the following can improve the accuracy of a CNN classifier of CPE:
 
 - **Clinical data**: Recent literature suggests that NT-proBNP concentrations can be influenced by confounding factors such as renal failure, age, sex, and body mass index (BMI). Thus, we will train the model with confounding clinical data of BMI, creatinine level, and presence of pneumonia and acute heart failure to correctly distinguish normal and edema cases.
-<br> 
+
 - **Lung and Heart Segmentation**: We will use transfer learning with an image segmentation model to isolate the heart and lungs of an X-ray image. We believe this reduces noise and focuses the network on the regions where edema would reside.
 
 <h2 id="data" class="jump-link-target">Data</h2>
