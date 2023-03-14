@@ -122,12 +122,12 @@ We used the default PyTorch ResNet152 model with a regression output since we we
 - **Model A**: original X-rays
 <center><img src="assets/Capstone Diagrams - Model1_log_output.png" alt="Model 1 Architecture" > </center>
 - **Model B**: original X-rays + clinical data
--- Concatenates the clinical data with the output from the convolutional layers
+* Concatenates the clinical data with the output from the convolutional layers
 <center><img src="assets/Capstone Diagrams - Model2_log_output.png" alt="Model 2 Architecture" ></center>
 - **Model C**: original X-rays + lung segmentations + heart segmentations
 <center><img src="assets/Capstone Diagrams - Model3_log_output.png" alt="Model 3 Architecture" ></center>
 - **Model D**: original X-rays + lung segmentations + heart segmentations + clinical data
--- Concatenates the clinical data with the output from the convolutional layers
+* Concatenates the clinical data with the output from the convolutional layers
 <center><img src="assets/Capstone Diagrams - Model4_log_output.png" alt="Model 4 Architecture" ></center>
 
 ### Model Training & Testing <a name="train_test_subparagraph"></a>
