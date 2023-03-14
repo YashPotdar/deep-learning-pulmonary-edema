@@ -141,22 +141,27 @@ The table below exhibits the ResNet152 model performances by input data, includi
 <center> <img src="assets/Capstone Diagrams - Results.png" alt="Test Set Results" height="400"></center>
 
 
-### Confusion Matrices <a name="confusion_matrices"></a>
-
-<iframe src="assets/ModelA_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
-<iframe src="assets/ModelB_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
-<iframe src="assets/ModelC_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
-<iframe src="assets/ModelD_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
+### AUC-ROC Comparison <a name="auroc_subparagraph"></a>
+The AUC-ROC Curves below displays the ROC curves of each ResNet152 model by Input Data. ROC curves display the performance of a binary classifier at multiple thresholds, and better classifiers will have more area under the curve. It can be seen that both Model B and Model D performed better than Model A and Model C since they have greater areas under the curve. Model B achieved the highest AUC score of 0.869 among all models.
+<iframe src="assets/ROC_Comparison.html" width=1100 height=800 frameBorder=0></iframe>
 
 ### Pearson R Correlation Comparison <a name="correlation"></a>
+The performance of the models can also be seen in the Pearson correlation scatterplots. These plots represent how well the predicted `log10_NTproBNP` correspond to the actual `log10_NTproBNP` values. Where the red line of $y=x$ represents a perfect model, it can be seen that both Models B and D best follow that line, with correlations of 0.739 and 0.738, respectively. Although there is not a significant difference in the correlation coefficient between these two models, they outperform the other two models.
 
 <iframe src="assets/ModelA_Correlation.html" width=700 height=600 frameBorder=0></iframe>
 <iframe src="assets/ModelB_Correlation.html" width=700 height=600 frameBorder=0></iframe>
 <iframe src="assets/ModelC_Correlation.html" width=700 height=600 frameBorder=0></iframe>
 <iframe src="assets/ModelD_Correlation.html" width=700 height=600 frameBorder=0></iframe>
 
-### AUROC Curves <a name="auroc_subparagraph"></a>
-<iframe src="assets/ROC_Comparison.html" width=1100 height=800 frameBorder=0></iframe>
+### Confusion Matrices <a name="confusion_matrices"></a>
+The Confusion Matrices show the predicted labels and true labels for each model on the test set. As previously mentioned, the matrices showcase that Model B outperformed Model A (AUC of 0.824) and even Model D (AUC of 0.866), which incorporated all the original chest radiographs, clinical data inputs, and lung and heart segmentation.
+
+Accuracy is an important consideration, but we would also want to minimize False Negatives, which mean we classified an edema case incorrectly as a normal case. Since it is potentially deadly to miss a positive diagnosis, we would want to minimize the False Negative Rate (FNR), which may increase False Positives. It can be seen that Model D minimizes the FNR with a value of 0.072, whereas Model C has the second lowest FNR. This suggests that segmentation may be lead to a classifier that predicts edema more often. The models utilizing segmentation each predicted 71% of the test set as having edema, compared to 69% for Model B.
+
+<iframe src="assets/ModelA_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
+<iframe src="assets/ModelB_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
+<iframe src="assets/ModelC_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
+<iframe src="assets/ModelD_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
 
 <h2 id="takeaways" class="jump-link-target">Takeaways</h2>
 From our results above, it is apparent that a more complex and preprocessed input did not improve the ability of the classifier to identify cases of pulmonary edema. We had hypothesized that image segmentation of X-rays would help focus the neural network on the lungs and heart regions, which is where edema occurs. We believed by reducing noise in the input, the classifier would be able to better distinguish normal and edema cases. However, segmentation did not improve performance. We propose two possible reasons for these findings:
