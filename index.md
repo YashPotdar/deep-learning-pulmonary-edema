@@ -97,16 +97,25 @@ Prior to any network training, we preprocessed the data in order to keep the rad
 
 The main model architectures we explored were VGG16 and ResNet152. Both architectures were trained on the L1-loss (mean absolute error) of the log BNPP values, as used in the original paper. We used a learning rate of 10e-4 and Adam optimizer while learning for 15 epochs for both architectures. When training the network, we unfroze layers and while optimizing the hyperparameters on the validation set, we froze layers. The ResNet152 model had 58145857 trainable parameters, while the VGG16 had 27514413. As in the paper, we used the ResNet152 model pre-trained on ImageNet. Since the VGG and ResNet architectures are generally used for classification, we altered the fully connected layer to have one output, which would be used for regression.
 
+<img src="assets/Capstone Diagrams - Model1.png" alt="Model 1 Architecture" height="500">
+<img src="assets/Capstone Diagrams - Model2.png" alt="Model 2 Architecture" height="500">
+<img src="assets/Capstone Diagrams - Model3.png" alt="Model 3 Architecture" height="500">
+<img src="assets/Capstone Diagrams - Model4.png" alt="Model 4 Architecture" height="500">
+
 ### Lung Segmentation <a name="segment_subparagraph"></a>
 The lung segmentation network, given an input of a radiograph, would output six segmented images: right lung, left lung, heart, right clavicle, left clavicle, and spinal column. As seen in Figure TODO below, we can see six masks, one for each segment. The last image shows an overlaid graph of the segments, which was interesting to visualize, but not used for segmenting the images since it did not serve as a mask. Image masks should just be binary, such that multiplying the mask to an image will return the segment of interest from the original image.
 
 Since edema is present in the lungs and a portion of the lungs are behind the heart, we decided to create a mask that combined the lung and heart segments. To create this, we used the numpy OR operator to include all the areas where the pixel value was 1. This yielded masks of the area of interest as seen in Figure TODO.
 
 Finally, we applied these masks to the given images to produce the segmented images with area of interest. By simply multiplying the mask to the original image, we were able to produce an accurate isolated image of the lungs and heart. In Figure TODO, we can see examples of original images and their segmented counterparts, which would subsequently be fed into our neural network.
+<img src="assets/Capstone Diagrams - Segmentation.png" alt="Segmentation in Action" height="500">
+
 
 
 <h2 id="results" class="jump-link-target">Results</h2>
 Add description about Findings
+<img src="assets/Capstone Diagrams - Results.png" alt="Test Set Results" height="500">
+
 
 ### Confusion Matrices <a name="confusion_matrices"></a>
 
