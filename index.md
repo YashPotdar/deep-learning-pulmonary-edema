@@ -129,7 +129,7 @@ Add refs
 
 <h2 id="about_us" class="jump-link-target">About Us</h2>
 <details class="button">
-    View Poster
+    <summary>View Poster</summary>
     <br>
     <img src="assets/DeepLearningEdemaPoster.png" alt="Poster Presentation" >
 </details>
