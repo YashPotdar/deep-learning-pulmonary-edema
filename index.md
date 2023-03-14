@@ -71,9 +71,9 @@ Convolutional neural networks (CNNs) have been effective in classifying the pres
 |    20029   |          4.30166 | 34.81 |        10.54 |           0 |                     0 |                   1 |
 
 <iframe src="assets/BNPP_dist.html" width=900 height=630 frameBorder=0></iframe>
-<iframe src="assets/logBNPP_dist.html" width=900 height=630 frameBorder=1></iframe>
-<iframe src="assets/bmi_dist.html" width=900 height=630 frameBorder=1></iframe>
-<iframe src="assets/creatinine_dist.html" width=900 height=630 frameBorder=1></iframe>
+<iframe src="assets/logBNPP_dist.html" width=900 height=630 frameBorder=0></iframe>
+<iframe src="assets/bmi_dist.html" width=900 height=630 frameBorder=0></iframe>
+<iframe src="assets/creatinine_dist.html" width=900 height=630 frameBorder=0></iframe>
 
 
 <h2 id="methods" class="jump-link-target">Methods</h2>
@@ -107,10 +107,10 @@ Add description about Findings
 
 ### Confusion Matrices <a name="confusion_matrices"></a>
 
-<iframe src="assets/ModelA_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
-<iframe src="assets/ModelB_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
-<iframe src="assets/ModelC_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
-<iframe src="assets/ModelD_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
+<iframe src="assets/ModelA_Confusion_Matrix.html" width=700 height=600 frameBorder=1></iframe>
+<iframe src="assets/ModelB_Confusion_Matrix.html" width=700 height=600 frameBorder=1></iframe>
+<iframe src="assets/ModelC_Confusion_Matrix.html" width=700 height=600 frameBorder=1></iframe>
+<iframe src="assets/ModelD_Confusion_Matrix.html" width=700 height=600 frameBorder=1></iframe>
 
 ### Pearson R Correlation Comparison <a name="correlation"></a>
 
