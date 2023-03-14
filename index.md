@@ -95,9 +95,6 @@ We constructed a dataset of 16,619 records from UCSD Health patients. The datase
 
 The `NT-proBNP` column represents the NT-proBNP value, a continuously valued biomarker measured from blood serum samples. As seen in the distribution below, there is a strong right skew due to the abnormally high NT-proBNP values. We performed a log transformation to create the `log10_NTproBNP` column. Using the threshold for pulmonary edema established in Huynh’s paper and prior work, we classified any patient with an NT-proBNP value of at least $400 pg/mL$ as an edema case. Any records with a log NT-proBNP value of at least $2.602$ are considered edema cases. 
 
-This sentence uses `$` delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
-
-
 The `bmi` column contained the body mass index ($kg/m^2$) of the patient, which is derived from a patient’s mass and height. The ‘creatinine’ column contains a continuous value of creatinine level ($mg/dL$) measured from blood serum samples. The `pneumonia` and `acute_heart_failure` columns contain binary values and are 1 if a patient has the condition. In the dataset, 12.0% of patients have pneumonia and 17.2% have acute heart failure. The distributions of the quantitative features are shown below.
 
 The target column (`cardiogenic_edema`) contains binary values which are 1 if a patient has CPE. Around 64.7% of the records in our dataset had CPE based on the threshold. 
@@ -109,17 +106,24 @@ The target column (`cardiogenic_edema`) contains binary values which are 1 if a 
 
 
 <h2 id="methods" class="jump-link-target">Methods</h2>
-Add description about Methods
+We trained four modified ResNet152 CNN architectures with differing inputs: (A) Original Radiographs only, (B) Original Radiographs + Clinical Data, (C) Original Radiographs + Heart & Lung Segmentations, and (D) Original Radiographs + Heart & Lung Segmentations + Clinical Data. The data were randomly split into train, validation, and test sets at a ratio of 80%/10%/10%. The four model’s accuracy and AUC on the test set (n = 1,662) were used to compare model performance.
 
-### Convolutional Neural Network (CNN) <a name="cnn_subparagraph"></a>
-Prior to any network training, we preprocessed the data in order to keep the radiographs in a usable format for training purposes. We initially extracted the paths and keys for the radiographs with help from Jake in our section. Then, we used the existing training, validation, and test datasets and created a label for edema, which was 1 or 0, depending on the presence or absence of pulmonary edema. Since there were images that did not correspond to data in the existing datasets, we found the intersection and found that there were 15164 training, 1823 validation, and 1913 test set images. Around 80.2%, 9.6%, and 10.1% of the data corresponded to the training, validation, and test data, respectively. When preprocessing the data and creating the data loaders, we used a batch size of 32 and 4 workers.
+### Input: Clinical Data <a name="clinical_subparagraph"></a>
+Clinical Data
 
-The main model architectures we explored were VGG16 and ResNet152. Both architectures were trained on the L1-loss (mean absolute error) of the log BNPP values, as used in the original paper. We used a learning rate of 10e-4 and Adam optimizer while learning for 15 epochs for both architectures. When training the network, we unfroze layers and while optimizing the hyperparameters on the validation set, we froze layers. The ResNet152 model had 58145857 trainable parameters, while the VGG16 had 27514413. As in the paper, we used the ResNet152 model pre-trained on ImageNet. Since the VGG and ResNet architectures are generally used for classification, we altered the fully connected layer to have one output, which would be used for regression.
+### Input: Lung & Heart Image Segmentation <a name="segmentation_subparagraph"></a>
+Lung & Heart Image Segmentation
 
+### Model Architectures <a name="architectures_subparagraph"></a>
+ResNet152 Architectures
 <center><img src="assets/Capstone Diagrams - Model1.png" alt="Model 1 Architecture" > </center>
 <center><img src="assets/Capstone Diagrams - Model2.png" alt="Model 2 Architecture" ></center>
 <center><img src="assets/Capstone Diagrams - Model3.png" alt="Model 3 Architecture" ></center>
 <center><img src="assets/Capstone Diagrams - Model4.png" alt="Model 4 Architecture" ></center>
+
+### Model Training & Testing <a name="train_test_subparagraph"></a>
+Model Training & Testing
+
 
 ### Lung Segmentation <a name="segment_subparagraph"></a>
 The lung segmentation network, given an input of a radiograph, would output six segmented images: right lung, left lung, heart, right clavicle, left clavicle, and spinal column. As seen in Figure TODO below, we can see six masks, one for each segment. The last image shows an overlaid graph of the segments, which was interesting to visualize, but not used for segmenting the images since it did not serve as a mask. Image masks should just be binary, such that multiplying the mask to an image will return the segment of interest from the original image.
@@ -128,8 +132,6 @@ Since edema is present in the lungs and a portion of the lungs are behind the he
 
 Finally, we applied these masks to the given images to produce the segmented images with area of interest. By simply multiplying the mask to the original image, we were able to produce an accurate isolated image of the lungs and heart. In Figure TODO, we can see examples of original images and their segmented counterparts, which would subsequently be fed into our neural network.
 <center><img src="assets/Capstone Diagrams - Segmentation.png" alt="Segmentation in Action" ></center>
-
-
 
 <h2 id="findings" class="jump-link-target">Findings</h2>
 Add description about Findings
@@ -150,11 +152,6 @@ Add description about Findings
 <iframe src="assets/ModelB_Correlation.html" width=700 height=600 frameBorder=0></iframe>
 <iframe src="assets/ModelC_Correlation.html" width=700 height=600 frameBorder=0></iframe>
 <iframe src="assets/ModelD_Correlation.html" width=700 height=600 frameBorder=0></iframe>
-
-
-
-### Losses <a name="losses_subparagraph"></a>
-Add description about losses - train and test
 
 ### AUROC Curves <a name="auroc_subparagraph"></a>
 <iframe src="assets/ROC_Comparison.html" width=1100 height=800 frameBorder=0></iframe>
