@@ -47,7 +47,13 @@
   
  <div class="button-container">
   <a href="https://github.com/ddav118/DSC-180B"  target="_blank" class="button">Project Repository</a>
-  <a href="https://github.com/YashPotdar/deep-learning-pulmonary-edema/blob/main/assets/DeepLearningEdemaPoster.pdf"  target="_blank" class="button">View Poster</a>
+  
+  <details class="button">
+    <summary>View Poster</summary>
+    <br>
+    <img src="assets/DeepLearningEdemaPoster.png" alt="Poster Presentation" >
+</details>
+  
  </div>
 
 
@@ -128,11 +134,7 @@ Add refs
 
 
 <h2 id="about_us" class="jump-link-target">About Us</h2>
-<details class="button">
-    <summary>View Poster</summary>
-    <br>
-    <img src="assets/DeepLearningEdemaPoster.png" alt="Poster Presentation" >
-</details>
+
 
 <table style="margin:auto; border-collapse: collapse;">
   <tr>
