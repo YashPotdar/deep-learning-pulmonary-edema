@@ -112,6 +112,14 @@ Add description about Findings
 <iframe src="assets/ModelC_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
 <iframe src="assets/ModelD_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
 
+### Pearson R Correlation Comparison <a name="correlation"></a>
+
+<iframe src="assets/ModelA_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
+<iframe src="assets/ModelB_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
+<iframe src="assets/ModelC_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
+<iframe src="assets/ModelD_Confusion_Matrix.html" width=700 height=600 frameBorder=0></iframe>
+
+
 
 ### Losses <a name="losses_subparagraph"></a>
 Add description about losses - train and test
