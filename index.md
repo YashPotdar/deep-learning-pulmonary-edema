@@ -197,9 +197,9 @@ We would like to thank our mentor, Dr. Albert Hsiao, for his guidance and feedba
 
 <table style="margin:auto; border-collapse: collapse;">
   <tr>
-    <td style="border-right: 1px solid black;"><a href="https://www.linkedin.com/in/david-d%C3%A1vila-garc%C3%ADa-001/" target="_blank">David Davila-Garcia</a></td>
-    <td style="border-right: 1px solid black;"><a href="https://www.linkedin.com/in/yashmpotdar/" target="_blank">Yash Potdar</a></td>
-    <td><a href="https://www.linkedin.com/in/marco-morocho-0062641b9/" target="_blank">Marco Morocho</a></td>
+    <td style="border-right: 1px solid black;"><a href="https://www.linkedin.com/in/david-d%C3%A1vila-garc%C3%ADa-001/" target="_blank"><strong>David Davila-Garcia</strong></a></td>
+    <td style="border-right: 1px solid black;"><a href="https://www.linkedin.com/in/yashmpotdar/" target="_blank"><strong>Yash Potdar</strong></a></td>
+    <td><a href="https://www.linkedin.com/in/marco-morocho-0062641b9/" target="_blank"><strong>Marco Morocho</strong></a></td>
   </tr>
   <tr>
     <td style="border-right: 1px solid black;">Pic 1</td>
