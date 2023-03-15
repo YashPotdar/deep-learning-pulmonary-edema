@@ -178,6 +178,10 @@ From our results above, it is apparent that a more complex and preprocessed inpu
 
 - The dataset size may have been sufficient for the neural network to distinguish normal and edema cases without the need for segmentation.  With around 13,000 training images, there was enough data for the neural network to learn the features that distinguish normal and edema cases in the lung and heart regions. A smaller dataset may benefit from segmentation as it provides more focused input and could help the neural network to learn the relevant features more accurately. Segmentation may yield a better classifier, in this case, due to the lack of the neural network’s ability to have enough data to focus on the heart and lungs.
 
+Our results reinforce our hypothesis that the addition of confounding factors as features improve the performance of a classifier. This suggests that when creating a classifier, it is crucial to understand the features that truly correlate with the target feature. In this case, the clinical labels have shown that they have a high impact on the presence of CPE.
+
+We were also able to create a model that performed better than the model in Huynh’s paper trained on 256x256 images. The AUC obtained by the model in the paper was roughly 0.85, whereas our highest-performing model had an AUC of 0.869.
+
 Overall, while we had expected segmentation to improve the classifier's accuracy, our results suggest that it may not always be necessary or beneficial depending on the dataset size and the neural network's ability to learn relevant features.
 
 
@@ -202,15 +206,15 @@ We would like to thank our mentor, Dr. Albert Hsiao, for his guidance and feedba
     <td><a href="https://www.linkedin.com/in/marco-morocho-0062641b9/" target="_blank"><strong>Marco Morocho</strong></a></td>
   </tr>
   <tr>
-    <td style="border-right: 1px solid black;">Pic 1</td>
+    <td style="border-right: 1px solid black;"><img src="assets/david.jpg" alt="David Davila-Garcia" height="200" ></td>
     <td style="border-right: 1px solid black;"><img src="assets/yash.jpg" alt="Yash Potdar" height="200" ></td>
     <td><img src="assets/marco.jpg" alt="Marco Morocho" height="200" ></td>
   </tr>
    <tr>
-    <td style="border-right: 1px solid black;">Description 1</td>
-    <td style="border-right: 1px solid black;">Hey! I’m Yash and I’m from the SF Bay Area. After graduation, I plan to travel Europe and work in the tech space. Some fields I’m interested in are autonomous vehicles and consumer technology.
+    <td style="border-right: 1px solid black;">David is from Saint Louis, MO. After graduation, he plans to pursue a MS in Biomedical Informatics and MD.</td>
+    <td style="border-right: 1px solid black;">Yash is from the SF Bay Area. After graduation, he plans to travel Europe and work in the tech space. Some fields he is interested in pursuing are autonomous vehicles and consumer technology.
 </td>
-    <td>Hi! My name is Marco and I am from Los Angeles, California. After college, I plan to travel and eventually get into the Sports Analytics field.
+    <td>Marco is from Los Angeles, CA. After college, he plans to travel and eventually get into the Sports Analytics field.
 </td>
   </tr>
 </table>
