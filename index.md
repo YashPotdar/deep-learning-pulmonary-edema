@@ -195,7 +195,7 @@ We would like to thank our mentor, Dr. Albert Hsiao, for his guidance and feedba
   </tr>
   <tr>
     <td style="border-right: 1px solid black;">Pic 1</td>
-    <td style="border-right: 1px solid black;">Pic 2</td>
-    <td>Pic 3</td>
+    <td style="border-right: 1px solid black;"><img src="assets/yash.jpg" alt="Yash Potdar" ></td>
+    <td><img src="assets/marco.jpg" alt="Marco Morocho" ></td>
   </tr>
 </table>
