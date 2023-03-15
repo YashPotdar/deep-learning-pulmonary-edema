@@ -108,10 +108,10 @@ The target column (`cardiogenic_edema`) contains binary values which are 1 if a 
 <h2 id="methods" class="jump-link-target">Methods</h2>
 We trained four modified ResNet152 CNN architectures with differing inputs: 
 <ol type="A">
-  <li>Original Radiographs only </li>
-  <li>Original Radiographs + Clinical Data</li>
-  <li>Original Radiographs + Heart & Lung Segmentations</li>
-  <li>Original Radiographs + Heart & Lung Segmentations + Clinical Data</li>
+   <strong><li>Original Radiographs only </li></strong>
+   <strong><li>Original Radiographs + Clinical Data</li></strong>
+   <strong><li>Original Radiographs + Heart & Lung Segmentations</li></strong>
+   <strong><li>Original Radiographs + Heart & Lung Segmentations + Clinical Data</li></strong>
 </ol>
 
 The data were randomly split into train, validation, and test sets at a ratio of 80%/10%/10%. The four model’s accuracy and AUC on the test set (n = 1,662) were used to compare model performance.
@@ -151,10 +151,7 @@ The table below exhibits the ResNet152 model performances by input data, includi
 
 ### AUC-ROC Comparison <a name="auroc_subparagraph"></a>
 The AUC-ROC Curves below displays the ROC curves of each ResNet152 model by Input Data. ROC curves display the performance of a binary classifier at multiple thresholds, and better classifiers will have more area under the curve. It can be seen that both Model B and Model D performed better than Model A and Model C since they have greater areas under the curve. Model B achieved the highest AUC score of 0.869 among all models.
-<iframe src="assets/ROC_Comparison.html" width=1100 height=650 frameBorder=1></iframe>
-
-<iframe src="assets/ROC_Comparison.html" width=1100 height=700 frameBorder=1></iframe>
-<iframe src="assets/ROC_Comparison.html" width=1100 height=500 frameBorder=1></iframe>
+<iframe src="assets/ROC_Comparison.html" width=1100 height=500 frameBorder=0></iframe>
 
 ### Pearson R Correlation Comparison <a name="correlation"></a>
 The performance of the models can also be seen in the Pearson correlation scatterplots. These plots represent how well the predicted `log10_NTproBNP` correspond to the actual `log10_NTproBNP` values. Where the red line of $y=x$ represents a perfect model, it can be seen that both Models B and D best follow that line, with correlations of 0.739 and 0.738, respectively. Although there is not a significant difference in the correlation coefficient between these two models, they outperform the other two models.
@@ -211,9 +208,9 @@ We would like to thank our mentor, Dr. Albert Hsiao, for his guidance and feedba
   </tr>
    <tr>
     <td style="border-right: 1px solid black;">Description 1</td>
-    <td style="border-right: 1px solid black;">Hey! I’m Yash Potdar and I’m originally from San Ramon, CA. After graduation, I plan to travel Europe and work in the tech space. Some fields I’m interested in are autonomous vehicles and consumer technology.
+    <td style="border-right: 1px solid black;">Hey! I’m Yash and I’m from the SF Bay Area. After graduation, I plan to travel Europe and work in the tech space. Some fields I’m interested in are autonomous vehicles and consumer technology.
 </td>
-    <td>Hi! My name is Marco Morocho and I am from Los Angeles, California. After college, I plan to travel and eventually get into the Sports Analytics field.
+    <td>Hi! My name is Marco and I am from Los Angeles, California. After college, I plan to travel and eventually get into the Sports Analytics field.
 </td>
   </tr>
 </table>
