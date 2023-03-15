@@ -106,7 +106,13 @@ The target column (`cardiogenic_edema`) contains binary values which are 1 if a 
 
 
 <h2 id="methods" class="jump-link-target">Methods</h2>
-We trained four modified ResNet152 CNN architectures with differing inputs: (A) Original Radiographs only, (B) Original Radiographs + Clinical Data, (C) Original Radiographs + Heart & Lung Segmentations, and (D) Original Radiographs + Heart & Lung Segmentations + Clinical Data. The data were randomly split into train, validation, and test sets at a ratio of 80%/10%/10%. The four model’s accuracy and AUC on the test set (n = 1,662) were used to compare model performance.
+We trained four modified ResNet152 CNN architectures with differing inputs: 
+- (A) Original Radiographs only 
+- (B) Original Radiographs + Clinical Data
+- (C) Original Radiographs + Heart & Lung Segmentations
+- (D) Original Radiographs + Heart & Lung Segmentations + Clinical Data
+
+The data were randomly split into train, validation, and test sets at a ratio of 80%/10%/10%. The four model’s accuracy and AUC on the test set (n = 1,662) were used to compare model performance.
 
 ### Input: Clinical Data <a name="clinical_subparagraph"></a>
 To ensure high-quality data for our project, we excluded patients with missing values for columns containing clinical data, specifically BMI, creatinine, pneumonia, and acute heart failure. These values which have been identified as confounds for CPE would be appended to the feature vector within the ResNet152 CNN.
@@ -143,7 +149,7 @@ The table below exhibits the ResNet152 model performances by input data, includi
 
 ### AUC-ROC Comparison <a name="auroc_subparagraph"></a>
 The AUC-ROC Curves below displays the ROC curves of each ResNet152 model by Input Data. ROC curves display the performance of a binary classifier at multiple thresholds, and better classifiers will have more area under the curve. It can be seen that both Model B and Model D performed better than Model A and Model C since they have greater areas under the curve. Model B achieved the highest AUC score of 0.869 among all models.
-<iframe src="assets/ROC_Comparison.html" width=1100 height=600 frameBorder=1></iframe>
+<iframe src="assets/ROC_Comparison.html" width=1100 height=550 frameBorder=1></iframe>
 
 ### Pearson R Correlation Comparison <a name="correlation"></a>
 The performance of the models can also be seen in the Pearson correlation scatterplots. These plots represent how well the predicted `log10_NTproBNP` correspond to the actual `log10_NTproBNP` values. Where the red line of $y=x$ represents a perfect model, it can be seen that both Models B and D best follow that line, with correlations of 0.739 and 0.738, respectively. Although there is not a significant difference in the correlation coefficient between these two models, they outperform the other two models.
@@ -195,7 +201,12 @@ We would like to thank our mentor, Dr. Albert Hsiao, for his guidance and feedba
   </tr>
   <tr>
     <td style="border-right: 1px solid black;">Pic 1</td>
-    <td style="border-right: 1px solid black;"><img src="assets/yash.jpg" alt="Yash Potdar" ></td>
-    <td><img src="assets/marco.jpg" alt="Marco Morocho" ></td>
+    <td style="border-right: 1px solid black;"><img src="assets/yash.jpg" alt="Yash Potdar" height="200" ></td>
+    <td><img src="assets/marco.jpg" alt="Marco Morocho" height="200" ></td>
+  </tr>
+   <tr>
+    <td style="border-right: 1px solid black;">Description 1</td>
+    <td style="border-right: 1px solid black;">Description 2</td>
+    <td>Description 3</td>
   </tr>
 </table>
